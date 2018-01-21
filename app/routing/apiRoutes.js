@@ -91,7 +91,6 @@ app.post("/api/friends", function(req, res) {
 			
 		}
 		console.log(closestMatch)
-		// $('#myModal').modal("show");
 		// Math.abs(2+3)
 
 	}
