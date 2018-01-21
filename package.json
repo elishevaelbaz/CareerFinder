@@ -1,5 +1,5 @@
 {
-  "name": "dessert-finder",
+  "name": "career-finder",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elishevaelbaz/DessertFinder.git"
+    "url": "git+https://github.com/elishevaelbaz/CareerFinder.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elishevaelbaz/DessertFinder/issues"
+    "url": "https://github.com/elishevaelbaz/CareerFinder/issues"
   },
-  "homepage": "https://github.com/elishevaelbaz/DessertFinder#readme",
+  "homepage": "https://github.com/elishevaelbaz/CareerFinder#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",

@@ -14,7 +14,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<!-- Bootswatch -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cyborg/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cyborg/bootstrap.min.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 
 
@@ -24,8 +26,8 @@
 
 	<div class="container">
     <div class="jumbotron">
-      <h1><span class="glyphicon glyphicon-fire"></span> Friend Finder <span class="glyphicon glyphicon-fire"></span></h1>
-      <h3>Find your Match!</h3>
+      <h1><span class="glyphicon glyphicon-fire"></span> Career Finder <span class="glyphicon glyphicon-fire"></span></h1>
+      <h3>Find your Optimal Career!</h3>
       <hr>
       <a href="/"><button type="button" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-home"></span> Home</button></a>
     </div>
@@ -49,9 +51,12 @@
 
               
 		
-
+<h4>Please complete the following questions to reflect your opinions as accurately as possible.</h4>
 		<section>
+
 			<div class="radio">
+				<br>
+				<p>I would like to work in a helping profession.</p>
 				<label>
 					<input type="radio" name="optradio1" id="help" value="1" >
 					Strongly Disagree
@@ -77,6 +82,8 @@
 
 		<section>
 			<div class="radio">
+				<br>
+				<p>I like to work with my hands.</p>
 				<label>
 					<input type="radio" name="optradio2" id="" value="1">
 					Strongly Disagree
@@ -102,6 +109,8 @@
 
 		<section>
 			<div class="radio">
+				<br>
+				<p>I am creative.</p>
 				<label>
 					<input type="radio" name="optradio3" id="" value="1">
 					Strongly Disagree
@@ -127,6 +136,8 @@
 
 			<section>
 			<div class="radio">
+				<br>
+				<p>I am detail-oriented.</p>
 				<label>
 					<input type="radio" name="optradio4" id="" value="1">
 					Strongly Disagree
@@ -151,6 +162,8 @@
 		</section>
 			<section>
 			<div class="radio">
+				<br>
+				<p>I like to follow procedures.</p>
 				<label>
 					<input type="radio" name="optradio5" id="" value="1">
 					Strongly Disagree
@@ -175,6 +188,8 @@
 		</section>
 			<section>
 			<div class="radio">
+				<br>
+				<p>I like science.</p>
 				<label>
 					<input type="radio" name="optradio6" id="" value="1">
 					Strongly Disagree
@@ -200,6 +215,8 @@
 			
 			<section>
 			<div class="radio">
+				<br>
+				<p>I am a people person.</p>
 				<label>
 					<input type="radio" name="optradio7" id="" value="1">
 					Strongly Disagree
@@ -224,6 +241,8 @@
 		</section>
 			<section>
 			<div class="radio">
+				<br>
+				<p>I like the feeling of an adrenaline rush.</p>
 				<label>
 					<input type="radio" name="optradio8" id="" value="1">
 					Strongly Disagree
@@ -249,6 +268,8 @@
 
 			<section>
 			<div class="radio">
+				<br>
+				<p>I have good verbal-linguistic skills.</p>
 				<label>
 					<input type="radio" name="optradio9" id="" value="1">
 					Strongly Disagree
@@ -274,6 +295,8 @@
 
 		<section>
 			<div class="radio">
+				<br>
+				<p>I like to solve problems.</p>
 				<label>
 					<input type="radio" name="optradio10" id="" value="1">
 					Strongly Disagree
@@ -308,7 +331,7 @@
 
       </div>
     </div>
-    <a href="/api/friends" class="text-info">API Friends</a> || <a href="#!" class="text-info">GitHub Repo</a>
+    <a href="/api/friends" class="text-info">API Friends</a> || <a href="https://github.com/elishevaelbaz/CareerFinder.git" class="text-info">GitHub Repo</a>
   </div>
 
 
@@ -320,8 +343,8 @@
 						<h4 class="modal-title">The best career for you:</h4>
 					</div>
 					<div class="modal-body">
-						<h1 id="careerName"></h1>
-						<img src="" id="careerImage" style="width: 400px; height: 264px;" >
+						<h3 id="careerName"></h3>
+						<img src="" id="careerImage" style="height: 300px;" >
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
