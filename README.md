@@ -2,12 +2,12 @@
 
 ### Overview
 
-This app is a career finder. This full-stack site takes in results from the users' surveys, and compares their answers with those for different professiosn. The app then displays the name and picture of the career with the best overall match. 
+This app is a career finder. This full-stack site takes in results from the users' surveys, and compares their answers with those for different professions. The app then displays the name and picture of the career with the best overall match. 
 
 The app uses Express to handle routing. The app is deployed on Heroku.
 
 ### Node Packages
- This app uses path, express and body-parser node packages (see package.json).
+ This app uses path, express, and body-parser node packages (see package.json).
 
 
 ### Instructions
@@ -20,6 +20,7 @@ The app uses Express to handle routing. The app is deployed on Heroku.
 
    * A GET Route to `/survey` which displays the survey page.
    * A default, catch-all route that leads to `home.html` which displays the home page. 
+
    ![homepage](app/public/images/homepageSmall.PNG "Description goes here")
 
 3. `apiRoutes.js` file contains two routes:
