@@ -20,7 +20,7 @@ The app uses Express to handle routing. The app is deployed on Heroku.
 
    * A GET Route to `/survey` which displays the survey page.
    * A default, catch-all route that leads to `home.html` which displays the home page. 
-   ![homepage](app/data/public/images/homepageSmall.PNG "Description goes here")
+   ![homepage](app/public/images/homepageSmall.PNG "Description goes here")
 
 3. `apiRoutes.js` file contains two routes:
 
@@ -29,7 +29,7 @@ The app uses Express to handle routing. The app is deployed on Heroku.
 
 4. The  application's data inside of `app/data/careers.js` as an array of objects. 
 
-![career objects](app/data/public/images/json.PNG )
+![career objects](app/public/images/json.PNG )
 
 
 5. The user's most compatible career is determined by:
@@ -46,4 +46,4 @@ The app uses Express to handle routing. The app is deployed on Heroku.
 6. Once the current user's most compatible career is found, the result is displayed as a modal pop-up.
    * The modal displays both the name and picture of the closest career match. 
 
-![modal](app/data/public/images/modal.PNG "Description goes here")
+![modal](app/public/images/modal.PNG "Description goes here")
