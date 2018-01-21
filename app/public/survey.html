@@ -1,341 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Test</title>
+	<head>
+		<meta charset="UTF-8">
+		<title>Career Finder Survey</title>
+		<!-- Added link to the jQuery Library -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+		<link rel="stylesheet" type="text/css" href="style.css">
 
-	<!-- Added link to the jQuery Library -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-	<!-- Bootswatch -->
-	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cyborg/bootstrap.min.css"> -->
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-
-
-</head>
-<body>
-
-
-	<div class="container">
-    <div class="jumbotron">
-      <h1><span class="glyphicon glyphicon-fire"></span> Career Finder <span class="glyphicon glyphicon-fire"></span></h1>
-      <h3>Find your Optimal Career!</h3>
-      <hr>
-      <a href="/"><button type="button" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-home"></span> Home</button></a>
-    </div>
-    <div class="row">
-
-      <div class="col-lg-12">
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title"><strong>Take the Survey</strong></h3>
-          </div>
-          <div class="panel-body">
-            <form method="POST" role="form">
-
-
-
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name-input">
-              </div>
-
-              
-		
-<h4>Please complete the following questions to reflect your opinions as accurately as possible.</h4>
-		<section>
-
-			<div class="radio">
-				<br>
-				<p>I would like to work in a helping profession.</p>
-				<label>
-					<input type="radio" name="optradio1" id="help" value="1" >
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio1" id="whwh" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio1" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio1" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio1" id="" value="5">
-					Strongly Agree
-				</label>
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1><span class="glyphicon glyphicon-fire"></span> Career Finder <span class="glyphicon glyphicon-fire"></span></h1>
+				<h3>Find your Optimal Career!</h3>
+				<hr>
+				<a href="/"><button type="button" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-home"></span> Home</button></a>
 			</div>
-		</section>
-
-		<section>
-			<div class="radio">
-				<br>
-				<p>I like to work with my hands.</p>
-				<label>
-					<input type="radio" name="optradio2" id="" value="1">
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio2" id="" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio2" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio2" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio2" id="" value="5">
-					Strongly Agree
-				</label>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>Take the Survey</strong></h3>
+						</div>
+						<div class="panel-body well">
+							<form method="POST" role="form">
+								<div class="form-group">
+									<label for="name">Name</label>
+									<input type="text" class="form-control" id="name-input">
+								</div>
+								
+								
+								<h4 id="instructions">Please complete the following questions to reflect your opinions as accurately as possible.</h4>
+								<section>
+									<div class="radio">
+										<br>
+										<p>I would like to work in a helping profession.</p>
+										<label>
+											<input type="radio" name="optradio1" id="help" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio1" id="whwh" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio1" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio1" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio1" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								<section>
+									<div class="radio">
+										<br>
+										<p>I like to work with my hands.</p>
+										<label>
+											<input type="radio" name="optradio2" id="" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio2" id="" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio2" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio2" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio2" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								<section>
+									<div class="radio">
+										<br>
+										<p>I am creative.</p>
+										<label>
+											<input type="radio" name="optradio3" id="" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio3" id="" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio3" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio3" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio3" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								<section>
+									<div class="radio">
+										<br>
+										<p>I am detail-oriented.</p>
+										<label>
+											<input type="radio" name="optradio4" id="" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio4" id="" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio4" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio4" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio4" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								<section>
+									<div class="radio">
+										<br>
+										<p>I like to follow procedures.</p>
+										<label>
+											<input type="radio" name="optradio5" id="" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio5" id="" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio5" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio5" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio5" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								<section>
+									<div class="radio">
+										<br>
+										<p>I like science.</p>
+										<label>
+											<input type="radio" name="optradio6" id="" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio6" id="" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio6" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio6" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio6" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								
+								<section>
+									<div class="radio">
+										<br>
+										<p>I am a people person.</p>
+										<label>
+											<input type="radio" name="optradio7" id="" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio7" id="" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio7" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio7" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio7" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								<section>
+									<div class="radio">
+										<br>
+										<p>I like the feeling of an adrenaline rush.</p>
+										<label>
+											<input type="radio" name="optradio8" id="" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio8" id="" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio8" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio8" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio8" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								<section>
+									<div class="radio">
+										<br>
+										<p>I have good verbal-linguistic skills.</p>
+										<label>
+											<input type="radio" name="optradio9" id="" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio9" id="" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio9" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio9" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio9" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								<section>
+									<div class="radio">
+										<br>
+										<p>I like to solve problems.</p>
+										<label>
+											<input type="radio" name="optradio10" id="" value="1">
+											Strongly Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio10" id="" value="2">
+											Disagree
+										</label>
+										<label>
+											<input type="radio" name="optradio10" id="" value="3">
+											Neutral
+										</label>
+										<label>
+											<input type="radio" name="optradio10" id="" value="4">
+											Agree
+										</label>
+										<label>
+											<input type="radio" name="optradio10" id="" value="5">
+											Strongly Agree
+										</label>
+									</div>
+								</section>
+								<button type="submit" class="btn  btn-info btn-md" id="submit">Submit</button>
+							</form>
+								
+						</div>
+					</div>
+				</div>
 			</div>
-		</section>
-
-		<section>
-			<div class="radio">
-				<br>
-				<p>I am creative.</p>
-				<label>
-					<input type="radio" name="optradio3" id="" value="1">
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio3" id="" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio3" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio3" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio3" id="" value="5">
-					Strongly Agree
-				</label>
-			</div>
-		</section>
-
-			<section>
-			<div class="radio">
-				<br>
-				<p>I am detail-oriented.</p>
-				<label>
-					<input type="radio" name="optradio4" id="" value="1">
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio4" id="" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio4" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio4" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio4" id="" value="5">
-					Strongly Agree
-				</label>
-			</div>
-		</section>
-			<section>
-			<div class="radio">
-				<br>
-				<p>I like to follow procedures.</p>
-				<label>
-					<input type="radio" name="optradio5" id="" value="1">
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio5" id="" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio5" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio5" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio5" id="" value="5">
-					Strongly Agree
-				</label>
-			</div>
-		</section>
-			<section>
-			<div class="radio">
-				<br>
-				<p>I like science.</p>
-				<label>
-					<input type="radio" name="optradio6" id="" value="1">
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio6" id="" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio6" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio6" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio6" id="" value="5">
-					Strongly Agree
-				</label>
-			</div>
-		</section>
-			
-			<section>
-			<div class="radio">
-				<br>
-				<p>I am a people person.</p>
-				<label>
-					<input type="radio" name="optradio7" id="" value="1">
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio7" id="" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio7" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio7" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio7" id="" value="5">
-					Strongly Agree
-				</label>
-			</div>
-		</section>
-			<section>
-			<div class="radio">
-				<br>
-				<p>I like the feeling of an adrenaline rush.</p>
-				<label>
-					<input type="radio" name="optradio8" id="" value="1">
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio8" id="" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio8" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio8" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio8" id="" value="5">
-					Strongly Agree
-				</label>
-			</div>
-		</section>
-
-			<section>
-			<div class="radio">
-				<br>
-				<p>I have good verbal-linguistic skills.</p>
-				<label>
-					<input type="radio" name="optradio9" id="" value="1">
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio9" id="" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio9" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio9" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio9" id="" value="5">
-					Strongly Agree
-				</label>
-			</div>
-		</section>
-
-		<section>
-			<div class="radio">
-				<br>
-				<p>I like to solve problems.</p>
-				<label>
-					<input type="radio" name="optradio10" id="" value="1">
-					Strongly Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio10" id="" value="2">
-					Disagree
-				</label>
-				<label>
-					<input type="radio" name="optradio10" id="" value="3">
-					Neutral
-				</label>
-				<label>
-					<input type="radio" name="optradio10" id="" value="4">
-					Agree
-				</label>
-				<label>
-					<input type="radio" name="optradio10" id="" value="5">
-					Strongly Agree
-				</label>
-			</div>
-		</section>
-
-		<button type="submit" class="btn  btn-info btn-md" id="submit">Submit</button>
-	</form>
-
-             
-
-           
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <a href="/api/friends" class="text-info">API Friends</a> || <a href="https://github.com/elishevaelbaz/CareerFinder.git" class="text-info">GitHub Repo</a>
-  </div>
-
-
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+			<a href="/api/friends" class="text-link">API Friends</a> || <a href="https://github.com/elishevaelbaz/CareerFinder.git" class="text-link">GitHub Repo</a>
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -343,128 +314,46 @@
 						<h4 class="modal-title">The best career for you:</h4>
 					</div>
 					<div class="modal-body">
-						<h3 id="careerName"></h3>
-						<img src="" id="careerImage" style="height: 300px;" >
+						<h2 id="career-name"></h2>
+						<img src="" id="career-image" align="middle" style="height: 300px;"" >
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
 					</div>
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+			</div><!-- /.modal -->
+					
 
+		<script>
+						
+			$("#submit").on("click", function(event) {
+				event.preventDefault();
+				var newCharacter = {
+					name: $("#name-input").val().trim(),
 
+					//store the checked radio buttons as corresponding scores
+					scores: [$('input[name=optradio1]:checked').val(), $('input[name=optradio2]:checked').val(), $('input[name=optradio3]:checked').val(), $('input[name=optradio4]:checked').val(), $('input[name=optradio5]:checked').val(), $('input[name=optradio6]:checked').val(), $('input[name=optradio7]:checked').val(), $('input[name=optradio8]:checked').val(), $('input[name=optradio9]:checked').val(), $('input[name=optradio10]:checked').val()]
+				};
 
+				console.log(newCharacter.scores)
 
-<script>
+				$.post("/api/friends", newCharacter)
+				.then(function(data) {
+			
+				$('#career-image').attr('src', data.photo);
+				$('#career-name').text(data.name);
+				
+				$('#myModal').modal("show");
+				});
+
+				$(':radio').each(function () {
+        	$('input[type="radio"]').prop('checked', false);
+    		})
+
+			});
 	
-	$("#submit").on("click", function(event) {
-      event.preventDefault();
-      var newCharacter = {
-        name: $("#name-input").val().trim(),
-        // photo: $("#photo").val().trim,
-        scores: [$('input[name=optradio1]:checked').val(), $('input[name=optradio2]:checked').val(), $('input[name=optradio3]:checked').val(), $('input[name=optradio4]:checked').val(), $('input[name=optradio5]:checked').val(), $('input[name=optradio6]:checked').val(), $('input[name=optradio7]:checked').val(), $('input[name=optradio8]:checked').val(), $('input[name=optradio9]:checked').val(), $('input[name=optradio10]:checked').val()]
-      };
-
-      console.log(newCharacter.scores)
-
-      $.post("/api/friends", newCharacter)
-      .then(function(data) {
-        // console.log("data.body" + data.body);
-        // console.log("data.chara" + data.newCharacter);
-        console.log(newCharacter);
-        // alert("Adding character...");
-
-        // console.log(friendList[index].photo)
-
-        $('#careerImage').attr('src', data.photo);
-        $('#careerName').text(data.name);
-        
-
-
-        //  $('.modal-body').load(data.photo,function(){
-        //     $('#myModal').modal({show:true});
-        // });
-         console.log("photo" + data.photo)
-
-        $('#myModal').modal("show");
-      });
-
-
-    //   function runWaitListQuery() {
-
-    //   // Here we get the location of the root page.
-    //   // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
-    //   var currentURL = window.location.origin;
-
-    //   // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-    //   $.ajax({ url: currentURL + "/api/friends", method: "GET" })
-    //   .then(function(waitlistData) {
-
-    //     // Here we are logging the URL so we have access to it for troubleshooting
-    //     console.log("------------------------------------");
-    //     console.log("URL: " + currentURL + "/api/waitlist");
-    //     console.log("------------------------------------");
-
-    //     // Here we then log the NYTData to console, where it will show up as an object.
-    //     console.log(waitlistData);
-    //     console.log("------------------------------------");
-
-    //     // Loop through and display each of the customers
-    //     for (var i = 0; i < waitlistData.length; i++) {
-
-    //       // Create the HTML Well (Section) and Add the table content for each reserved table
-    //       var waitlistSection = $("<div>");
-    //       waitlistSection.addClass("well");
-    //       waitlistSection.attr("id", "waitlistWell-" + i + 1);
-    //       $("#waitlistSection").append(waitlistSection);
-
-    //       var tableNumber = i + 1;
-
-    //       // Then display the remaining fields in the HTML (Section Name, Date, URL)
-    //       $("#waitlistWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "</span> | " + waitlistData[i].customerID + "</h2>");
-    //     }
-    //   });
-    // }
-
-
-      //compare each value in the scores with each value of the others
-
-
-//       function calculateResults(){
-
-// 			var counter = 0;
-// 			var closestMatch = 0;
-// // 	var incorrectCounter = 0;
-
-// // 	for (var i = 0; i < array.length; i++) {
-// // 		var x = document.getElementById("question"+(i+1)+"choice1").checked;
-// // 		var y = document.getElementById("question"+(i+1)+"choice2").checked;
-// // 		var z = document.getElementById("question"+(i+1)+"choice3").checked;
-// // 		if (x){
-// // 			counter++
-// // 		}
-
-// // 		//calculate how many were answered incorrectly so 
-// // 		// can see how many unanswered
-// // 		else if ((y)||(z)){
-// // 			incorrectCounter++
-// 		}
-	
-
-
-
-
-      // Question: What does this code do??
-      // $.post("/api/new", newCharacter)
-      // .then(function(data) {
-      //   console.log(data);
-      //   alert("Adding character...");
-      // });
-    });
-
-
-</script>
-	
-</body>
+		</script>
+						
+	</body>
 </html>

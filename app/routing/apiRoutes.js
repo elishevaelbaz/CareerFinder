@@ -1,61 +1,37 @@
+
 var path = require("path");
 
-var friendList = require("../data/friends.js");
-
-var closestMatch;
+var careerList = require("../data/friends.js");
 
 var index;
-
-
 
 
 module.exports = function (app){
 
 	var characters = [];
 
-app.get("/api/friends", function(req, res) {
+	app.get("/api/friends", function(req, res) {
 	
-  res.json(friendList);
-});
+  	res.json(careerList);
+	});
 
 
-app.post("/api/friends", function(req, res) {
-  // res.sendFile(path.join(__dirname, "../public/home.html"));
+	app.post("/api/friends", function(req, res) {
 
-  var newcharacter = req.body;
-
-
-  console.log("HItting post route")
-
-  console.log("test" + newcharacter);
-
-  // We then add the json the user sent to the character array
-  characters.push(newcharacter);
-
-  
+	  var newcharacter = req.body;
 
 
-  //logic here!!!!!!!!!!
-
-  calculateResults(newcharacter);
-
-  // if (tableData.length < 5) {
-  //     tableData.push(req.body);
-  //     res.json(true);
-  //   }
-  //   else {
-  //     waitListData.push(req.body);
-  //     res.json(false);
-  //   }
-
-  // sending the friend
-  res.json(friendList[index])
+	  // We then add the json the user sent to the character array
+	  characters.push(newcharacter);
+	 
+	  calculateResults(newcharacter);
 
 
-  // We then display the JSON to the users
-  // res.json(newcharacter);
+	  // send the corresponding object from the careerList in the response
+	  res.json(careerList[index])
 
-});
+
+	});
 
 
 
@@ -67,35 +43,27 @@ app.post("/api/friends", function(req, res) {
 
 		var friendScore = 0;
 
-		// var closestMatch;
-
-		for (var i = 0; i < friendList.length; i++) {
+		// for each career in the list
+		for (var i = 0; i < careerList.length; i++) {
 			diffScore = 0;
-			for (var j = 0; j < friendList[0].scores.length; j++) {
-				console.log("enteredScore " + newC.scores[j])
-				console.log("friendScore " + parseInt(friendList[i].scores[j]))
-				diffScore += Math.abs(newC.scores[j] - parseInt(friendList[i].scores[j]))
-
-				console.log("i is : " + i + "diffscore: " + diffScore);
+			//for each question score
+			for (var j = 0; j < careerList[0].scores.length; j++) {
+				//compare the user score and the career score
+				diffScore += Math.abs(newC.scores[j] - parseInt(careerList[i].scores[j]))
 
 			}
+			// if the total difference of the current career is less than diff
 			if (diffScore < diff){
 				diff = diffScore;
-
-				console.log("You are here")
+				// set index to the current i
 				index = i;
-				closestMatch = friendList[i].name;
-
 			}
+			//and continue with the next career in the list
 
-			
 		}
-		console.log(closestMatch)
-		// Math.abs(2+3)
 
 	}
 
 }
 
-// module.exports = expressify;
 

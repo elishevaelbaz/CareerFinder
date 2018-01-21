@@ -1,24 +1,50 @@
 
 
 body{
-	/*background-color: #f4992c;*/
 	background: url("images/background2.jpg");
 	height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-	/*background-repeat: no-repeat;*/
-	/*#edd4b6;*/
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 label,
 input,
-p{
+p,
+#instructions{
 	margin-left:20px;
 }
 
 p{
 	font-size:18px;
+}
+
+.jumbotron{
+	margin-top:25px;
+	text-align: center;
+}
+
+.text-link{
+	color:#04077c;
+	font-size: 16px;
+}
+
+#name-input{
+	width:500px;
+}
+
+#submit{
+	margin-top: 10px;
+	margin-left:48%;
+}
+
+#career-name{
+	text-align:center;
+}
+
+#career-image{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,4 +1,4 @@
-var friendList = [
+var careerList = [
     {
       "name": "Accountant",
       "photo": "images/accountant.jpg",
@@ -148,4 +148,4 @@ var friendList = [
 ]
 
 
-module.exports = friendList;
+module.exports = careerList;
