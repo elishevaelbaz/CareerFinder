@@ -1,7 +1,7 @@
 
 var path = require("path");
 
-var careerList = require("../data/friends.js");
+var careerList = require("../data/careers.js");
 
 var index;
 
@@ -10,13 +10,13 @@ module.exports = function (app){
 
 	var characters = [];
 
-	app.get("/api/friends", function(req, res) {
+	app.get("/api/careers", function(req, res) {
 	
   	res.json(careerList);
 	});
 
 
-	app.post("/api/friends", function(req, res) {
+	app.post("/api/careers", function(req, res) {
 
 	  var newcharacter = req.body;
 
@@ -40,8 +40,6 @@ module.exports = function (app){
 		var userScore = 0
 
 		var diff = 1000
-
-		var friendScore = 0;
 
 		// for each career in the list
 		for (var i = 0; i < careerList.length; i++) {

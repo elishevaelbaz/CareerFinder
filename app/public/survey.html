@@ -304,7 +304,7 @@
 					</div>
 				</div>
 			</div>
-			<a href="/api/friends" class="text-link">API Friends</a> || <a href="https://github.com/elishevaelbaz/CareerFinder.git" class="text-link">GitHub Repo</a>
+			<a href="/api/careers" class="text-link">API Careers</a> || <a href="https://github.com/elishevaelbaz/CareerFinder.git" class="text-link">GitHub Repo</a>
 		</div>
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
 			<div class="modal-dialog" role="document">
@@ -338,7 +338,7 @@
 
 				console.log(newCharacter.scores)
 
-				$.post("/api/friends", newCharacter)
+				$.post("/api/careers", newCharacter)
 				.then(function(data) {
 			
 				$('#career-image').attr('src', data.photo);
